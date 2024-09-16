@@ -9,7 +9,7 @@ def index(request):
 
 
 def about(request):
-    return HttpResponse("О сайте")
+    return TemplateResponse(request, "about.html")
 
 
 def contact(request):
@@ -17,7 +17,7 @@ def contact(request):
 
 
 def products(request):
-    return HttpResponse("Список услуг")
+    return TemplateResponse(request, "products.html")
 
 
 def nails(request):

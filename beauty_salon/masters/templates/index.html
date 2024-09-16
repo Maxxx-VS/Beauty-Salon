@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'CSS/styles.css' %}" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <title>Салон красоты</title>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz@10..48&family=Lumanosimo&family=Moon+Dance&family=Open+Sans:ital,wght@0,500;1,500&family=Pacifico&family=Press+Start+2P&display=swap" rel="stylesheet">
+</head>
+<body>
+        <div class="banner">
+            <div class="banner-img" style="background-image: url{% static 'IMAGES/01.jpg' %}"></div>
+            <div class="banner-img" style="background-image: url{% static 'IMAGES/02.jpg' %}"></div>
+            <div class="banner-img" style="background-image: url{% static 'IMAGES/03.jpg' %}"></div>
+            <div class="banner-img" style="background-image: url{% static 'IMAGES/04.jpg' %}"></div>
+        </div>
+
+    <nav>
+        <ul>
+            <li class="logo"><img src="{% static 'IMAGES/logo.jpg' %}" alt="логотип" >
+
+                <li><a href="products"><i class="fa fa-home"></i>Запись к мастеру</a></li>
+                <li><a href="about"><i class="fa fa-book"></i>О нас</a></li>
+                <li><a href="111.html"><i class="fa fa-home"></i>Наша команда</a></li>
+                <li><a href="https://www.youtube.com/watch?v=xqH9VccdcB8"><i class="fa fa-phone"></i>Видео о нас</a></li>
+
+        </ul>
+    </nav>
+    <div class="wrapper">
+        <div class="section">
+            <div class="box-area">
+                <h2 style="color: black"> </h2>
+            </div>
+        </div>
+    </div>    
+
+    <div class="banner-text">
+        <h1>BEAUTY YOU</h1>
+        <p>НАЙДИ СВОЙ НОВЫЙ ОБРАЗ</p>
+    </div>
+</div>
+</body>
+</html>

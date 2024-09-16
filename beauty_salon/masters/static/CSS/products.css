@@ -1,0 +1,112 @@
+body {
+    background: rgb(104, 104, 122);
+    font-family: 'Lobster', cursive;
+}
+a {
+    text-decoration: none;
+}
+.wrapper {
+    padding: 125px 0 0 0;
+    display: flex; /**/
+    flex-direction: column;
+    justify-content: center; /*определяет как браузер распзнает пространство между блоками*/
+}
+.services {
+    width: 1100px;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /*растояние между*/
+    align-items: center;
+    margin: 0 auto;
+}
+.single-img {
+    border-radius: 25px;
+    display: flex;  
+    flex-direction: column-reverse;
+    flex-wrap: nowrap;
+    width: 330px;
+    height: 450px;
+    overflow: hidden;
+    box-shadow: 25px 50px 20px rgba(0, 0, 0, 0.3); /*тень картинки*/
+    transform: translate(0, 0);
+    transition: .3s;
+}
+.single-img:hover {
+    transform: translate(0, -9px);
+}
+.img-one {
+    background-image: url(../IMAGES/nails_logo.jpg);
+    background-size: cover; /*ОБРЕЗАЕТ И ПОДГОНЯЕТ ФОТО*/
+    background-position: center center;
+}
+.img-two {
+    background-image: url(../IMAGES/heirs_logo.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.img-three {
+    background-image: url(../IMAGES/eye_logo.jpg);
+    background-size: cover;
+    background-position: center center;
+}
+.img-text {
+    background: linear-gradient(to top, rgba(185, 215, 249, 0.9), rgba(255, 255, 255, 0)); /*цвет понимающегося фрагмента*/
+    padding: 0 10px 5px 10px;
+    width: 100%;
+    height: auto;
+    position: relative;
+    transform: translate(0, 110px);
+    line-height: 25px;
+    transition: 0.5s ease;
+    display: inline-block;
+    text-align: center;
+    color: #000000;
+}
+.img-text h4 {
+    line-height: 15px;
+    padding: 0;
+    margin: 16px 0;
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+}
+.img-text p {
+    line-height: 15px;
+    font-size: 15px;
+    padding: 0;
+    margin: 16px 0;
+    text-transform: uppercase;
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-weight: 900;
+    
+    
+}
+.services button {
+    background: orangered;
+    color: #fff;
+    padding: 10px 35px;
+    border: none;
+    border-radius: 50px;
+    line-height: 14px;
+    display: inline-block;
+    margin-bottom: 10px;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+.single-img:hover .img-text {
+    transform: translate(0, 0);
+}
+
+@media (max-widht: 991px){
+    .wrapper{
+        padding: 0;
+    }
+    .services{
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+    }
+    a{
+        margin-bottom: 35px;
+    }
+}

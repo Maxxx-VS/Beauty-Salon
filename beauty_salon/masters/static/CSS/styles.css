@@ -1,0 +1,256 @@
+body {
+    margin: 0;
+    padding: 0;
+    /* font-family: 'Montserrat', sans-serif; */
+    background: rgb(104, 104, 122);
+    font-family: 'Moon Dance', cursive;
+}
+
+nav ul {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    width: 260px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: black;
+}
+
+nav ul li {
+    list-style: none; /* удаляем точку у списка*/
+    font-size: 15px;
+}
+
+nav ul li a {
+    display: block;
+    font-family: 'Moon Dance', cursive;
+    text-decoration: none; /* удаляем подчеркивание у ссылки*/
+    text-transform: uppercase; /* все буквы большие*/
+    color: white;
+    position: relative;
+    padding: 25px 0 25px 38px;
+}
+
+nav ul li a:before {
+    content: ''; /* не изменяемость контента*/
+    position: absolute; /* уд*/
+    top: 0px;
+    right: 0px;
+    width: 0%;
+    height: 100%;
+    background: grey;
+    border-radius: 40px 0px 0px 40px;
+    z-index: -1; /* слой, который выежает влево*/
+    transition: all 450ms ease-in-out; /* скорость анимации */
+}
+
+nav ul li a:hover { /* наведение мыши меняет цвет*/
+    color: black;
+}
+
+nav ul li a:hover:before { /* наведение мыши размер полоски*/
+    width: 95%;
+}
+
+.wrapper {
+    margin-left: 260px;
+}
+
+.section {
+    display: grid;
+    place-items: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.box-area h2 {
+    text-transform: uppercase;
+    font-size: 50px;
+}
+
+.box-area p {
+    line-height: 2;
+}
+
+.box-area {
+    width: 75%;
+}
+
+.logo {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    overflow: hidden; /* спрятано */
+    margin: 25px auto;
+}
+
+.logo img {
+    width: 100%;
+}
+
+
+.banner {
+    padding: 10px 10px 10px 10px; /* с верху ,справа, вниз, влево */
+    margin: 0 260px; /* 0 - это верх низ auto - лево право */
+    position: absolute; /*растягивает содержимое баннера*/
+    width: 95vw;
+    height: 95vh;
+    overflow: hidden;
+}
+.banner-img {
+    position: absolute; /* позволет растянуть картинку на всю ширину экрана */
+    width: 100%;
+    height: 100%;
+    background: no-repeat 50% 50%; /* No-repeat растягивет картинку */
+    background-size: cover; 
+    animation: animate 15s linear infinite; 
+    opacity: 1;
+    transform: scale(1.2);
+}
+.banner-img:nth-child(1) { /* псевдокласс позволяет выбирать элемент по номеру */
+    animation-name: animate-1;
+    z-index: 3;
+}
+.banner-img:nth-child(2) {
+    animation-name: animate-2;
+    z-index: 2;
+}
+.banner-img:nth-child(3) {
+    animation-name: animate-3;
+    z-index: 1;
+}
+.banner-img:nth-child(4) {
+    animation-name: animate-4;
+    z-index: 0;
+}
+@keyframes animate-1 { /*анимация которая не зависит от наведения мыши*/
+    0% {
+    opacity: 1;
+    transform: scale(1.2);
+    }   
+    1.5% {
+    opacity: 1;/*отвечает за степень непрозрачность  за другим объектом*/
+    }
+    23% {
+    opacity: 1;
+    }
+    26% {
+    opacity: 0;
+    transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+        }
+    98% {
+        opacity: 0;
+        transform: scale(1.22);
+    }
+    100% {
+        opacity: 1;
+    }
+}
+@keyframes animate-2 { /*анимация которая не зависит от наведения мыши*/
+    23% {
+    opacity: 1;
+    transform: scale(1.2);
+    }   
+    26% {
+    opacity: 1;/*отвечает за степень непрозрачность  за другим объектом*/
+    }
+    48% {
+    opacity: 1;
+    }
+    51% {
+    opacity: 0;
+    transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+}
+@keyframes animate-3 { /*анимация которая не зависит от наведения мыши*/
+    48% {
+    opacity: 1;
+    transform: scale(1.2);
+    }   
+    51% {
+    opacity: 1;/*отвечает за степень непрозрачность  за другим объектом*/
+    }
+    73% {
+    opacity: 1;
+    }
+    76% {
+    opacity: 0;
+    transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(1.2);
+    }
+
+}
+@keyframes animate-4 { /*анимация которая не зависит от наведения мыши*/
+    73% {
+    opacity: 1;
+    transform: scale(1.2);
+    }   
+    76% {
+    opacity: 1;/*отвечает за степень непрозрачность  за другим объектом*/
+    }
+    98% {
+    opacity: 1;
+    }
+    100% {
+    opacity: 0;
+    transform: scale(1);
+    }
+}
+.banner-text {
+    margin: 0 140px;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -60%); /* угол с которого начинается блок */
+    padding: 70px;
+    z-index: 50;
+    width: 275px;
+    height: 75px;
+    border: 10px ridge #fff; /* линия и её параметр */
+    border-radius: 30px;
+}
+.banner-text h1 {
+    text-align: center;
+    font-family: 'Moon Dance', cursive;
+    text-transform: uppercase;
+    line-height: 1.2;
+    color: #fff;
+    font-size: 40px;
+    color: rgb(176, 176, 227);
+    margin: 0;
+    font-weight: 900;/*жирность шрифта*/
+}
+.banner-text p {
+    color: rgb(176, 176, 227);
+    text-align: center;
+    font-family: 'Moon Dance', cursive;
+    text-transform: uppercase;
+    font-size: 20px;
+}
+span {
+    margin: 0 140px;
+    background-color: rgba(0, 0, 0, 0.75);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-60%, -60%); /* угол с которого начинается блок */
+    padding: 70px;
+    z-index: 50;
+    width: 30%;
+    height: 90%;
+
+    border-radius: 30px;
+}
