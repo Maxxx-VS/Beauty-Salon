@@ -1,9 +1,11 @@
 from django.shortcuts import render
 from django.http import HttpResponse
+from django.template.response import TemplateResponse
 
 
 def index(request):
-    return HttpResponse("Главная")
+    data = {"header": "Hello Django", "message": "Welcome to Python"}
+    return TemplateResponse(request, "index.html", context=data)
 
 
 def about(request):
